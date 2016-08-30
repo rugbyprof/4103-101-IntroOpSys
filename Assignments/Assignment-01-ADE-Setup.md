@@ -277,7 +277,7 @@ $ sudo apt-get install git
 ![](https://d3vv6lp55qjaqc.cloudfront.net/items/2Y3p3e0B3t362M1Z020X/Apps-Google-Drive-Sheets-icon.png?X-CloudApp-Visitor-Id=1094421)
 #### Update the Class Roster:
 
-- Here is a link to our class roster on google docs: https://docs.google.com/spreadsheets/d/1AQE5b4RNq93JC97D2d-xDs0QoE3dmYzqJVzct2YZdok/edit?usp=sharing
+- Here is a link to our class roster on google docs: https://docs.google.com/spreadsheets/d/1Ryb4wiL9mQjTCPeLLASosfHuUi3YnZ6AlEXQChcUCQw/edit?usp=sharing
 
 - Update the roster by adding your information to it. 
 

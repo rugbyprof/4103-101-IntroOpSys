@@ -4,24 +4,65 @@ from subprocess import call
 import sys
 import os 
 
+
+def pull(d):
+    print("git -C %s pull" % (d))
+    call(["git" , "-C" , d , "pull"])
+
+
+def push(d,c):
+    pull(d)
+    print("git add -A")
+    call(["git" , "-C", d , "add" , "-A"])
+    print("git commit -m \"%s\"" % (c))
+    call(["git" , "-C", d, "commit", "-m", c])
+    print("git push origin master")
+    call(["git" , "-C", d, "push" , "origin" , "master"])
+    #call(["git" , "push" ,alias , "+master:refs/heads/master"]);
+
+def printUsage():
+    print 'Usage: mygit [push,pull,pushall] ["comment"] \n Example: mygit push "first commit"'
+    sys.exit(0)
+
 if __name__ == "__main__":
 
+    command = None
+    comment = None
+    commands = ['push','pull','pushall']
+
     if len(sys.argv) < 2:
-         print 'Usage: mygit branchname "comment" \n Example: mygit web "first commit"'
-         sys.exit(0)
+         printUsage()
 
     # Get the directory of the folder your in.
     dir = os.getcwd()
 
-    #comment should be first (and only) argument
-    comment = sys.argv[1]
+    AllDirs = os.listdir(dir)
 
-    print("git pull")
-    call(["git" , "-C" , dir , "pull"])
-    print("git add -A")
-    call(["git" , "-C", dir , "add" , "-A"])
-    print("git commit -m \"%s\"" % (comment))
-    call(["git" , "-C", dir, "commit", "-m", comment])
-    print("git push origin master")
-    call(["git" , "-C", dir, "push" , "origin" , "master"]) 
-    #call(["git" , "push" ,alias , "+master:refs/heads/master"]);
+    # Get the command (push or pull)
+    command = sys.argv[1]
+
+    if command not in commands:
+        printUsage()
+
+    if len(sys.argv) > 2:
+        #comment should be first (and only) argument
+        comment = sys.argv[2]
+    
+        if comment == None:
+            printUsage()
+
+
+    if command == 'push':
+        push(dir,comment)
+    elif command == 'pushall':
+        for d in AllDirs:
+            print(d)
+            if os.path.isdir(d+'/.git'):
+                push(d,comment)
+                print("+-------------------------------------------------------+")
+    else:
+        for d in AllDirs:
+            print(d)
+            if os.path.isdir(d+'/.git'):
+                pull(d)
+                print("+-------------------------------------------------------+")

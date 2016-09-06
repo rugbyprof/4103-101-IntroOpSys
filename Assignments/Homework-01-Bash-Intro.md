@@ -6,7 +6,8 @@ Due: Tuesday September 13th by Class time.
 ## Warning
 
 - Folder names, paths, filenames are all case sensitive. 
-- I ask you to do the same things nearly every assignment for example: 
+- Nearly every assignment I ask you to do the same things. 
+- For example: 
     - create a folder called `homework_X` and put it in the `/xyz` folder and then write a script called `abc-1.sh` and put it the `homework_X` folder.
 - Then I will log in to your server and try to execute 
     - `/xyz/homework_X/abc-1.sh`

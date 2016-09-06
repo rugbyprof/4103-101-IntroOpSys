@@ -33,7 +33,16 @@ One method of work would be:
 Another method would be:
 
 1. Fire up notepad++ and turn on the `npp-ftp` plugin.
-2. Add a connection to your server
+2. Add a connection to your server (Instructions can be found [here](http://www.addictivetips.com/windows-tips/nppftp-for-notepad-access-download-edit-code-files-on-ftp-server/))
+
+| Notepad ++ Connect via SFTP|
+|:----------------:|
+| Click the "cog" wheel to open profile settings: |
+| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/183u17421b3s3u012p3Z/npp1.png?X-CloudApp-Visitor-Id=1094421) |
+| Create a new profile: |
+| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/1a2s0w1s2i0M3a1d1T3h/npp2.png?X-CloudApp-Visitor-Id=1094421) |
+| Choose that profile to log in: |
+| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/422h3Q0X093r1w473Z2c/npp3.png?X-CloudApp-Visitor-Id=1094421) |
 
 ### Script 1
 

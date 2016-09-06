@@ -39,7 +39,7 @@ You can get your work done however you want as long as your scripts end up:
 1. On github.
 2. On your server at the prescribed path. 
 
-Method 1 - Editing locally:
+**Method 1** - Editing locally:
 
 - Assuming the above steps are complete and you cloned your github repo.
 - Using gitbash create a local folder called `homework-01` in the `assignments` folder.
@@ -67,7 +67,7 @@ Method 1 - Editing locally:
     - `cd  /opt/your4103repo`
     - `git pull`
 
-Method 2 - Editing on the server:
+**Method 2** - Editing on the server:
 
 - Login to your server and goto directory `/opt`
 - Run `git clone git@github.com:yourusername/your4103repo.git`

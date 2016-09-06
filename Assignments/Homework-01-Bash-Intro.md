@@ -36,18 +36,17 @@ Due: Tuesday September 13th by Class time.
 
 You can get your work done however you want as long as your scripts end up:
 
-1. In your github repo which also ends up on github.
+1. On github.
 2. On your server at the prescribed path. 
-3. In the correctly named folders. 
 
-One method of work would be (preferred):
+Method 1 - Editing locally:
 
-- Assuming the above steps are complete!
-- Create a local folder called `homework-01` in gitbash (doesn't matter where).
+- Assuming the above steps are complete and you cloned your github repo.
+- Using gitbash create a local folder called `homework-01` in the `assignments` folder.
 - Keep working locally in gitbash (in your `homework-01` folder) and forget about the server or github for now.
 - Write all your scripts (naming them correctly) in this folder.
-- You can use notepad++ or any editor to get this done since your local and not connecting via SFTP.
-- Once finished, copy the folder and its contents to your local copy of your repository (assuming you cloned it already) so you have:
+- You can use any editor to get this done since your local and not connecting via SFTP.
+- Once finished you should have a directory structure like this:
 
 - ![][folder] /your4103repo
     - ![][folder] /assignments
@@ -61,13 +60,22 @@ One method of work would be (preferred):
     - `git add -A`
     - `git comit -m "adding homework 1"`
     - `git push origin master`
+
 - Login to your server and goto directory `/opt`
-- Run `git pull git@github.com:yourusername/your4103repo.git`
-- `cp -r your4103repo/assignments/homework-01 .` (copy the homework folder from inside your repo into `/opt`)
+    - Run `git clone git@github.com:yourusername/your4103repo.git`
+- If your repo is already there:
+    - `cd  /opt/your4103repo`
+    - `git pull`
 
-Another method would be:
+Method 2 - Editing on the server:
 
-- Connect via the `npp-ftp` plugin.
+- Login to your server and goto directory `/opt`
+- Run `git clone git@github.com:yourusername/your4103repo.git`
+- If your repo is already there, then pull in any updates:
+    - `cd  /opt/your4103repo`
+    - `git pull`
+
+- Now connect via the `npp-ftp` plugin.
 
 | Notepad ++ Connect via SFTP|
 |:----------------:|
@@ -78,21 +86,21 @@ Another method would be:
 | Choose that profile to log in: |
 | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/422h3Q0X093r1w473Z2c/npp3.png?X-CloudApp-Visitor-Id=1094421) |
 
-- Create a folder called `homework-01` in the `/opt` via notepad++ interface.
-- Create all your scripts in your `homework-01` folder via notepad++.
-- Now log in to your server via `gitbash` and go to the `\opt` folder.
-- Clone your repo.
-- If you didn't create your `assignments` folder in your repo, do it now.
-- Assuming you changed into your repo folder:
-    - run this: `cp -r ../homework-01 ./assignments`
-- If your IN your assignments folder:
-    - run this: `cp -r ../../homework-01 .`
-- If your in `\opt` at the same level as your repo:
-    - run this `cp -r homework-01 ./your4103repo/assignments`
-- Essentally all three commands are the same thing but run from different directories.
-- Now push your assignments to github:
-- `cd your4130repo`
-- Then run:
+- Create a folder called `homework-01` in the `/opt/your4103repo/assignments` folder via the notepad++ interface.
+- Create all your scripts in your `homework-01` folder using notepad++.
+- Your directory structure should look like the following:
+
+- ![][folder] /your4103repo
+    - ![][folder] /assignments
+        - ![][folder] /homework-01 
+            - ![][script] command_args.sh
+            - ![][script] myrandom.sh
+            - ![][script] versiona.sh
+            - ![][script] versionb.sh
+            
+- Now that the server is all set, we need to push our changes to github.
+- Log in to your server and go to `/opt/your4130repo`
+- From your github repo folder run:
     - `git add -A`
     - `git comit -m "adding homework 1"`
     - `git push origin master`

@@ -42,7 +42,7 @@ You can get your work done however you want as long as your scripts end up:
 **Method 1** - Editing locally:
 
 - Assuming the above steps are complete and you cloned your github repo.
-- Using gitbash create a local folder called `homework-01` in the `assignments` folder.
+- Using gitbash create a local folder called `homework-01` in the `assignments` folder of your repo.
 - Keep working locally in gitbash (in your `homework-01` folder) and forget about the server or github for now.
 - Write all your scripts (naming them correctly) in this folder.
 - You can use any editor to get this done since your local and not connecting via SFTP.
@@ -60,12 +60,14 @@ You can get your work done however you want as long as your scripts end up:
     - `git add -A`
     - `git comit -m "adding homework 1"`
     - `git push origin master`
+- This should put all your files on github.
 
-- Login to your server and goto directory `/opt`
-    - Run `git clone git@github.com:yourusername/your4103repo.git`
-- If your repo is already there:
-    - `cd  /opt/your4103repo`
-    - `git pull`
+- Now lets pull your files down from github onto your server:
+    - Login to your server and goto directory `/opt`
+        - Run `git clone git@github.com:yourusername/your4103repo.git`
+    - If your repo is already there:
+        - `cd  /opt/your4103repo`
+        - `git pull`
 
 **Method 2** - Editing on the server:
 

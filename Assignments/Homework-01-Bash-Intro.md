@@ -20,14 +20,19 @@ Due: Tuesday September 13th by Class time.
 
 ## Prep Work
 
-1. Make sure there is a user: `griffin` on your server with the password `2D2016!!!` and sudo access (if there is not it will mean an automatic zero for this assignment).
-2. Clone your github repository in the folder: `/opt/`. Make sure the permissions on this folder are `755`.
-3. Make a folder called `assignments` in your github repo.
-4. Make another folder called `homework-01` in the `assignments` folder.
-5. All scripts for this assignment will be in the `homework-01` folder (that's in the `assignments` folder).
-6. A copy of the `homework-01` folder should also be at the same level as your github repo in `/opt` (this will make the path consistent on everyone's server so I can find your programs faster).
+- Make sure there is a user: `griffin` on your server with the password `2D2016!!!` and sudo access (if there is not it will mean an automatic zero for this assignment because ... I can't grade it if I can't log in).
+- Log into your server. You will need to be `root` to edit `/opt`
+- Clone your github repository in the folder: `/opt/`. Make sure the permissions on this folder are `755`.
+- Make a folder called `assignments` in your github repo.
+- Make another folder called `homework-01` in the `assignments` folder.
+- All scripts for this assignment will be in the `homework-01` folder (that's in the `assignments` folder).
+- A copy of the `homework-01` folder should also be at the same level as your github repo in `/opt` (this will make the path consistent on everyone's server so I can find your programs faster).
 
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/1b2s3x3z2a290E2W0K3X/Image%202016-09-06%20at%2012.40.55%20PM.png?X-CloudApp-Visitor-Id=1094421)
+- ![][folder] /opt
+    - ![][folder] /your4103repo
+        - ![][folder] /assignments
+            - ![][folder] /homework-01 
+    - ![][folder] /homework-01
 
 ### Work Flow (Still Prep)
 
@@ -39,18 +44,28 @@ You can get your work done however you want as long as your scripts end up:
 
 One method of work would be (preferred):
 
-- Create a folder called `homework-01` in gitbash (doesn't matter where).
+- Assuming the above steps are complete!
+- Create a local folder called `homework-01` in gitbash (doesn't matter where).
 - Keep working locally in gitbash (in your `homework-01` folder) and forget about the server or github for now.
 - Write all your scripts (naming them correctly) in this folder.
 - You can use notepad++ or any editor to get this done since your local and not connecting via SFTP.
-- Once finished, copy the folder and its contents to your repository (assuming you cloned it already).
-- Then run:
+- Once finished, copy the folder and its contents to your local copy of your repository (assuming you cloned it already) so you have:
+
+- ![][folder] /your4103repo
+    - ![][folder] /assignments
+        - ![][folder] /homework-01 
+            - ![][script] command_args.sh
+            - ![][script] myrandom.sh
+            - ![][script] versiona.sh
+            - ![][script] versionb.sh
+
+- Then from here ![][folder] /your4103repo run:
     - `git add -A`
     - `git comit -m "adding homework 1"`
     - `git push origin master`
 - Login to your server and goto directory `/opt`
 - Run `git pull git@github.com:yourusername/your4103repo.git`
-- `cp -r your4103repo/assignments/homework-01 .` 
+- `cp -r your4103repo/assignments/homework-01 .` (copy the homework folder from inside your repo into `/opt`)
 
 Another method would be:
 
@@ -116,3 +131,8 @@ hello
 
 - Using the script from `versiona.sh`, see if you can get it so that the date is after the name of the file (eg. file1_2016-01-28.txt (The command `basename` can be useful here.)
 - Name this script `versionb.sh`. 
+
+[folder]: https://d3vv6lp55qjaqc.cloudfront.net/items/3W1y1J0U2W2A2N3P2D1V/folder.gif?X-CloudApp-Visitor-Id=1094421 "Folder Alt"
+[script]: https://d3vv6lp55qjaqc.cloudfront.net/items/2F2A3E2T2b061P2a1v3P/script.gif?X-CloudApp-Visitor-Id=1094421 "Script Alt"
+[text]: https://d3vv6lp55qjaqc.cloudfront.net/items/0h1U2s1B040P141F0R0u/text.gif?X-CloudApp-Visitor-Id=1094421 "text alt"
+[python]: https://d3vv6lp55qjaqc.cloudfront.net/items/092A1b1N3w16020g3e3S/py.gif?X-CloudApp-Visitor-Id=1094421 "python alt"

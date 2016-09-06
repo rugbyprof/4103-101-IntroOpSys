@@ -5,8 +5,8 @@ Due: Tuesday September 13th by Class time.
 ### Prep Work
 
 1. Make sure there is a user: `griffin` on your server with the password `2D2016!!!` and sudo access (if there is not it will mean an automatic zero for this assignment).
-2. Clone your github repository in the folder: `/usr/opt/`. Make sure the permissions on this folder are `755`.
-3. Make a folder called `assignments` in your repo.
+2. Clone your github repository in the folder: `/opt/`. Make sure the permissions on this folder are `755`.
+3. Make a folder called `assignments` in your github repo.
 4. Make another folder called `homework-01` in the `assignments` folder.
 5. All scripts below will be in the `homework-01` folder.
 

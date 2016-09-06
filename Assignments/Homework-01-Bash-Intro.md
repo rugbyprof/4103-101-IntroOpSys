@@ -2,38 +2,58 @@
 Due: Tuesday September 13th by Class time.
 
 
-### Prep Work
+
+## Warning
+
+- Folder names, paths, filenames are all case sensitive. 
+- I ask you to do the same things nearly every assignment for example: 
+    - create a folder called `homework_X` and put it in the `/xyz` folder and then write a script called `abc-1.sh` and put it the `homework_X` folder.
+- Then I will log in to your server and try to execute 
+    - `/xyz/homework_X/abc-1.sh`
+- This is NOT the same as:
+    - `/xyz/homework_Y/abc-1.sh`
+    - `/xyz/homework-X/abc-1.sh`
+    - `/xyz/homework_X/abd-1.sh`
+- One character wrong means I don't find it (and I don't grade it). 
+- So read carefully. 
+
+## Prep Work
 
 1. Make sure there is a user: `griffin` on your server with the password `2D2016!!!` and sudo access (if there is not it will mean an automatic zero for this assignment).
 2. Clone your github repository in the folder: `/opt/`. Make sure the permissions on this folder are `755`.
 3. Make a folder called `assignments` in your github repo.
 4. Make another folder called `homework-01` in the `assignments` folder.
-5. All scripts for this assignment will be in the `homework-01` folder.
-6. The contents of the `homework-01` folder should also be in a folder called `homework-01` the same level as your github repo in `/opt` (this will make the path consistent on everyone's server so I can find your programs faster).
+5. All scripts for this assignment will be in the `homework-01` folder (that's in the `assignments` folder).
+6. A copy of the `homework-01` folder should also be at the same level as your github repo in `/opt` (this will make the path consistent on everyone's server so I can find your programs faster).
 
-### Work Flow
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/1b2s3x3z2a290E2W0K3X/Image%202016-09-06%20at%2012.40.55%20PM.png?X-CloudApp-Visitor-Id=1094421)
+
+### Work Flow (Still Prep)
 
 You can get your work done however you want as long as your scripts end up:
 
-1. In your github repo in the correct folders.
+1. In your github repo which also ends up on github.
 2. On your server at the prescribed path. 
+3. In the correctly named folders. 
 
-One method of work would be:
+One method of work would be (preferred):
 
-1. Create a folder called `homework-01` in gitbash (doesn't matter where).
-2. Keep working locally in gitbash and forget about the server or github for now.
-2. Write all your scripts (naming them correctly) in this folder.
-3. You can use notepad++ or any editor to get this done since your local.
-3. Once finished, copy the folder and its contents to your repository (assuming you cloned it already).
-4. Then run:
+- Create a folder called `homework-01` in gitbash (doesn't matter where).
+- Keep working locally in gitbash (in your `homework-01` folder) and forget about the server or github for now.
+- Write all your scripts (naming them correctly) in this folder.
+- You can use notepad++ or any editor to get this done since your local and not connecting via SFTP.
+- Once finished, copy the folder and its contents to your repository (assuming you cloned it already).
+- Then run:
     - `git add -A`
     - `git comit -m "adding homework 1"`
     - `git push origin master`
+- Login to your server and goto directory `/opt`
+- Run `git pull git@github.com:yourusername/your4103repo.git`
+- `cp -r your4103repo/assignments/homework-01 .` 
 
 Another method would be:
 
-1. Fire up notepad++ and turn on the `npp-ftp` plugin.
-2. Add a connection to your server (Instructions can be found [here](http://www.addictivetips.com/windows-tips/nppftp-for-notepad-access-download-edit-code-files-on-ftp-server/))
+- Connect via the `npp-ftp` plugin.
 
 | Notepad ++ Connect via SFTP|
 |:----------------:|
@@ -43,6 +63,27 @@ Another method would be:
 | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/1a2s0w1s2i0M3a1d1T3h/npp2.png?X-CloudApp-Visitor-Id=1094421) |
 | Choose that profile to log in: |
 | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/422h3Q0X093r1w473Z2c/npp3.png?X-CloudApp-Visitor-Id=1094421) |
+
+- Create a folder called `homework-01` in the `/opt` via notepad++ interface.
+- Create all your scripts in your `homework-01` folder via notepad++.
+- Now log in to your server via `gitbash` and go to the `\opt` folder.
+- Clone your repo.
+- If you didn't create your `assignments` folder in your repo, do it now.
+- Assuming you changed into your repo folder:
+    - run this: `cp -r ../homework-01 ./assignments`
+- If your IN your assignments folder:
+    - run this: `cp -r ../../homework-01 .`
+- If your in `\opt` at the same level as your repo:
+    - run this `cp -r homework-01 ./your4103repo/assignments`
+- Essentally all three commands are the same thing but run from different directories.
+- Now push your assignments to github:
+- `cd your4130repo`
+- Then run:
+    - `git add -A`
+    - `git comit -m "adding homework 1"`
+    - `git push origin master`
+
+## Write Scripts 
 
 ### Script 1
 

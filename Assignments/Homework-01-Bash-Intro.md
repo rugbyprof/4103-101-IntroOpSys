@@ -3,18 +3,22 @@ Due: Tuesday September 13th by Class time.
 
 
 
-## Warning
+## Friendly Warning
 
 - Folder names, paths, filenames are all case sensitive. 
 - Nearly every assignment I ask you to do the same things. 
 - For example: 
-    - create a folder called `homework_X` and put it in the `/xyz` folder and then write a script called `abc-1.sh` and put it the `homework_X` folder.
-- Then I will log in to your server and try to execute 
+    - Create a folder called `homework_X` and put it in the `/xyz` folder.
+    - Then write a script called `abc-1.sh` and put it the `homework_X` folder.
+- Then I will log in to your server and try to execute:
     - `/xyz/homework_X/abc-1.sh`
-- The path above is NOT the same path as:
+- If it runs then great, if it doesn't then something was named wrong:
     - `/xyz/homework_Y/abc-1.sh`
     - `/xyz/homework-X/abc-1.sh`
     - `/xyz/homework_X/abd-1.sh`
+- It's the same concept as:
+    - `https://googe.com` is NOT
+    - `https://google.com` 
 - One character wrong means I don't find it (and I don't grade it). 
 - So read carefully and if I didn't specify a name for your files, you may want to ask. 
 

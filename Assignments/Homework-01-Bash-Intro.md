@@ -8,8 +8,32 @@ Due: Tuesday September 13th by Class time.
 2. Clone your github repository in the folder: `/opt/`. Make sure the permissions on this folder are `755`.
 3. Make a folder called `assignments` in your github repo.
 4. Make another folder called `homework-01` in the `assignments` folder.
-5. All scripts below will be in the `homework-01` folder.
+5. All scripts for this assignment will be in the `homework-01` folder.
+6. The contents of the `homework-01` folder should also be in a folder called `homework-01` the same level as your github repo in `/opt` (this will make the path consistent on everyone's server so I can find your programs faster).
 
+### Work Flow
+
+You can get your work done however you want as long as your scripts end up:
+
+1. In your github repo in the correct folders.
+2. On your server at the prescribed path. 
+
+One method of work would be:
+
+1. Create a folder called `homework-01` in gitbash (doesn't matter where).
+2. Keep working locally in gitbash and forget about the server or github for now.
+2. Write all your scripts (naming them correctly) in this folder.
+3. You can use notepad++ or any editor to get this done since your local.
+3. Once finished, copy the folder and its contents to your repository (assuming you cloned it already).
+4. Then run:
+    - `git add -A`
+    - `git comit -m "adding homework 1"`
+    - `git push origin master`
+
+Another method would be:
+
+1. Fire up notepad++ and turn on the `npp-ftp` plugin.
+2. Add a connection to your server
 
 ### Script 1
 

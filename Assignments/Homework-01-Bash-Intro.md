@@ -1,8 +1,6 @@
 # Bash Homework 1
 Due: Tuesday September 13th by Class time.
 
-
-
 ## Friendly Warning
 
 - Folder names, paths, filenames are all case sensitive. 
@@ -25,18 +23,14 @@ Due: Tuesday September 13th by Class time.
 ## Prep Work
 
 - Make sure there is a user: `griffin` on your server with the password `2D2016!!!` and sudo access (if there is not it will mean an automatic zero for this assignment because ... I can't grade it if I can't log in).
-- Log into your server. You will need to be `root` to edit `/opt`
-- Clone your github repository in the folder: `/opt/`. Make sure the permissions on this folder are `755`.
+- Log into your server and `cd /opt` 
+- You will need to be `root` to edit the `/opt` folder
+- Clone your github repository in the `/opt/` folder. 
 - Make a folder called `assignments` in your github repo.
-- Make another folder called `homework-01` in the `assignments` folder.
-- All scripts for this assignment will be in the `homework-01` folder (that's in the `assignments` folder).
-- A copy of the `homework-01` folder should also be at the same level as your github repo in `/opt` (this will make the path consistent on everyone's server so I can find your programs faster).
 
 - ![][folder] /opt
     - ![][folder] /your4103repo
         - ![][folder] /assignments
-            - ![][folder] /homework-01 
-    - ![][folder] /homework-01
 
 ### Work Flow (Still Prep)
 

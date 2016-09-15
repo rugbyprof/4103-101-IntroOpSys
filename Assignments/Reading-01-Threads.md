@@ -1,4 +1,4 @@
-## Threading Overview
+# Threading Overview
 
 Read concepts introduced below (additionally [HERE](https://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python) as well) and then go to here: [Homework-02-Threads.md](./Homework-02-Threads.md) to implement some (pseudo) threaded code. I used the example from the first link but re-wrote it for no other reason than to explain it better to the class. It's easier to explain code written by yourself, for obvious reasons. I also took out some list comprehensions and lambda functions that didn't really add anything to the code (except more for me to explain to you :smile: ).
 

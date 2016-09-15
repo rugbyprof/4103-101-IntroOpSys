@@ -5,15 +5,15 @@ Read concepts introduced below (additionally [HERE](https://www.toptal.com/pytho
 
 
 
-General concepts: concurrency, parallelism, threads and processes
-====================================================================
+## General concepts: concurrency, parallelism, threads and processes
+
 
 <sup>Source: http://learn-gevent-socketio.readthedocs.io/en/latest/general_concepts.html</sup>
 
 In this section, we want to set the fundamentals knowledge required to understand how greenlets, pthreads (python threading for multithreading) and processes (python's multiprocessing) module work, so we can better understand the details involved in implementing python gevent.
 
-What's the difference between concurrency and parallelism?
---------------------------------------------------------------
+### What's the difference between concurrency and parallelism?
+
 
 When we talk about implementing threads (whether greenlets or pthreads) and processes, what we are really trying to achieve is concurrency and/or parallelism.
 
@@ -21,16 +21,16 @@ So what's the difference, you ask?
 
 Concurrency and parallelism are distinct concepts. Concurrency is concerned with managing access to shared state from different threads, whereas parallelism is concerned with utilizing multiple processors/cores to improve the performance of a computation.
 
-What's a coroutine?
-----------------------
+###  What's a coroutine?
+
 
 It's a computer program that generalize subroutines to allow multiple entry points for suspending and resuming execution at certain locations.  Coroutines are suitable for implementing cooperative tasks, iterators, infinite lists and pipes.
 
 
 .. _threads-label:
 
-What is a thread?
-------------------------
+### What is a thread?
+
 
 A thread is a basic unit of CPU utilization.  It is also referred to as a "lightweight process".
 
@@ -53,8 +53,8 @@ In a multi-threaded task, one server thread may be blocked and waiting for somet
 
 .. _processes-label:
 
-What is a process?
--------------------------
+### What is a process?
+
 
 In computing, a process is an instance of a computer program that is being executed.  It contains the program code and its current activity.  Depending on the operating system, a process may be made up of multiple threads of execution that execute instructions concurrently.
 
@@ -78,8 +78,8 @@ The operating system holds most of this information about active processes in da
 
 The operating system keeps its processes separated and allocates the resources they need, so that they are less likely to interfere with each other and cause system failures (e.g. deadlock or thrasing).  The operating system may provide mechanisms for inter-process communication to enable processes in safe and predictable ways.
 
-What's the difference between threads and processes?
------------------------------------------------------
+### What's the difference between threads and processes?
+
 
 A process is an executing instance of an application.  What does that mean? When we launch a python shell or executing a python script, we start a process that runs our python shell or our python script. The operating system creates a process in response to us starting the python shell or python script and the `primary thread` of our process begins executing.
 
@@ -89,8 +89,8 @@ On a single processor, multithreading typically happens by time-division multipl
 
 On a multiprocessor and a multi-core system, threads can be truly concurrent, with every processor or CPU core executing a separate thread simultaneously (concurrently *and* in parallel). 
 
-What does that mean in the context of a python application?
----------------------------------------------------------------
+### What does that mean in the context of a python application?
+
  
 python's (CPython) Global Interpretor Lock (GIL) prevents parallel threads of execution on multiple cores and as such, threading implementation on python is useful only for concurrent thread implementation for webservers.
 
@@ -98,15 +98,15 @@ This is what it means when people say "python manage.py runserver" development s
 
 However, if our python application is not a webserver and it bottlenecks due to CPU-intensive computation instead of network I/O, having multiple threads will not help at all (and in fact, such a CPU-bound python application will perform badly if we attempt to implement multiple threads).  This is because of python's Global Interpreter Lock (GIL).  There are some python interpreter implementation (such as Jython and IronPython) that do not have a GIL and so multithreaded execution for a CPU-bound python application will work well but the typical python interpreters that we use - CPython - is not appropriate for multithreaded CPU execution.
 
-If CPython python has GIL, why do we still use it?
---------------------------------------------------------
+### If CPython python has GIL, why do we still use it?
+
 
 We know that the java implementation of Python (Jython) supports true threading (concurrent and parallel) by taking advantage of the underlying JVM.  We also know that the IronPython port (running on Microsoft's CLR) do not have GIL. We could use them if we want to run code that has true threading capabilities.
 
 The problem is that these platforms are always playing catch-up with new language features or library features, so unfortunately, it boils down to a trade-off between being able to use updated python features and python library features versus being able to run true threading code on Jython/IronPython.
 
-So we cannot execute in parallel with python?
------------------------------------------------------
+### So we cannot execute in parallel with python?
+
 
 Actually, we can. But generally not by using threads but by using processes (with one exception which allows for parallel threads!).
 
@@ -116,8 +116,8 @@ However, we **can** execute parallel CPU computation and parallel I/O operation 
 
 **The exception** - `cython <http://cython.org>`_ is able to support native thread parallelism through the **cython.parallel** module by releasing the GIL (http://docs.cython.org/src/userguide/parallelism.html?highlight=nogil).  The backend for executing parallel threads is OpenMP which is a feature available in the gcc compiler but not yet available in clang/llvm compiler.  It is expected that the clang/llvm compiler will support OpenMP in the near future.
 
-Advanced distributed, parallel computing with python
-----------------------------------------------------------
+### Advanced distributed, parallel computing with python
+
 
 Beyond some of the solutions offered in the previous paragraph, large scale data processing tools include discoproject (python with erlang and includes map/reduce capabilities) and PySpark on top of the spark framework (scala based).
 

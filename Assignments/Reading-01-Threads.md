@@ -1,12 +1,14 @@
 ## Threading Overview
 
-Initially I wanted the class to go [HERE](https://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python) to read and learn about threading in python. I have since changed my mind. I will still use the example posed by the writer of the articel, but I have re-written it so I can give better instructions on accomplishing the task. For now, read below and then go to 
+Initially I wanted the class to go [HERE](https://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python) to read and learn about threading in python. I have since changed my mind. I will still use the example posed by the writer of the articel, but I have re-written it so I can give better instructions on accomplishing the task. For now, read below and then go to [Homework-02-Threads.md](./Homework-02-Threads.md) to implement some (pseudo) threading code. 
 
 
-Source: http://learn-gevent-socketio.readthedocs.io/en/latest/general_concepts.html
+
 
 General concepts: concurrency, parallelism, threads and processes
 ====================================================================
+
+<sup>Source: http://learn-gevent-socketio.readthedocs.io/en/latest/general_concepts.html</sup>
 
 In this section, we want to set the fundamentals knowledge required to understand how greenlets, pthreads (python threading for multithreading) and processes (python's multiprocessing) module work, so we can better understand the details involved in implementing python gevent.
 

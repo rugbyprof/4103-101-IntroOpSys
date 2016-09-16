@@ -2,6 +2,13 @@
 
 You won't really have to write any code, but you will have to install some libraries and such on your droplet. So start early and hit me up with issues you run into. 
 
+Install the following:
+
+- `pip install urllib3` (maybe urllib2)
+- `pip install imgurpython`
+- `pip install pyopenssl ndg-httpsclient pyasn1` (this fixes some errors doing the https call)
+- If the obove pip command chokes, try installing this first: `apt-get install libffi-dev libssl-dev`
+
 ```python
 from imgurpython import ImgurClient
 import os

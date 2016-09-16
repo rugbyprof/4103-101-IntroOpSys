@@ -9,6 +9,8 @@ Install the following:
 - `pip install pyopenssl ndg-httpsclient pyasn1` (this fixes some errors doing the https call)
 - If the obove pip command chokes, try installing this first: `apt-get install libffi-dev libssl-dev`
 
+For now, make it all run! I'll post more about what I want you to turn in. And READ the threading overview!
+
 ```python
 from imgurpython import ImgurClient
 import os

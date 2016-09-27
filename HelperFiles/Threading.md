@@ -571,8 +571,8 @@ class MyThread(threading.Thread):
 
 if __name__ == '__main__':
     for i in range(3):
-	t = MyThread()
-	t.start()
+        t = MyThread()
+        t.start()
 ```
 
 Once a thread object is created, its activity must be started by calling the thread's `start()` method. This invokes the `run()` method in a separate thread of control.

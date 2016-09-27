@@ -341,7 +341,7 @@ We can see the exit of daemon thread about 5 seconds after the exit of the non-d
 
 By default, join() blocks indefinitely. In our sample, `join()` blocks the calling thread (main thread) until the threads (d / t) whose join() method is called is terminated - either normally or through an unhandled exception - or until the optional timeout occurs.
 
-We can also pass a timeout argument which is a float representing the number of seconds to wait for the thread to become inactive. If the thread does not complete within the timeout period, join() returns anyway.
+We can also pass a ***timeout argument*** which is a float representing the number of seconds to wait for the thread to become inactive. If the thread does not complete within the timeout period, join() returns anyway.
 
 When the timeout argument is present and not `None`, it should be a floating point number specifying a timeout for the operation in seconds (or fractions thereof). As `join()` always returns None, we must call `isAlive()` after join() to decide whether a timeout happened - if the thread is still alive, the join() call timed out.
 

@@ -28,4 +28,5 @@ Define the following and give examples of each.
 - A markdown file that contains your answers in a structured format.
 - Name your file: `Test_One_Addon.md`
 - Thorough well thought out answers to the questions.
-- Mardown reference: ttps://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+- Mardown reference: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+- This is to add a letter grade and a half to your exam, so I will be grading extremely hard.

@@ -29,4 +29,4 @@ Define the following and give examples of each.
 - Name your file: `Test_One_Addon.md`
 - Thorough well thought out answers to the questions.
 - Mardown reference: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-- This is to add a letter grade and a half to your exam, so I will be grading extremely hard.
+- This is to add a letter grade and a half to your exam, so I will be extremely picky.

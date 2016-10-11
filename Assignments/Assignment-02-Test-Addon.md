@@ -1,4 +1,4 @@
-d## Test 1 Helper
+## Test 1 Helper
 Due: Oct 18th by classtime.
 
 For up to 15 points to be added to your exam, complete the following.

@@ -213,6 +213,9 @@ class FetchUrls(threading.Thread):
 ## RLock
 RLock is a reentrant lock. `acquire()` can be called multiple times by the same thread without blocking. Keep in mind that `release()` needs to be called the same number of times to unlock the resource.
 
+- In officially released Python versions (2.4, 2.5... up to 3.1), an RLock is much slower than a Lock, because Locks are implemented in C and RLocks in Python (this will change in 3.2)
+- A Lock can be released from any thread (not necessarily the thread which acquire()d it), while an RLock has to be released by the same thread which acquired it
+
 Using Lock, the second call to `acquire()` by the same thread will block:
 
 ```python
@@ -838,3 +841,6 @@ def join(self):
 ```
 
 ![](https://d3vv6lp55qjaqc.cloudfront.net/items/1Q1O3C3V0s1Z3Q0K3R1B/Image%202016-10-18%20at%209.11.18%20AM.png?X-CloudApp-Visitor-Id=1094421)
+
+http://dabeaz.blogspot.com/2009/09/python-thread-synchronization.html
+http://www.laurentluce.com/posts/python-threads-synchronization-locks-rlocks-semaphores-conditions-events-and-queues/

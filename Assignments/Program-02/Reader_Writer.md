@@ -22,7 +22,8 @@ a rudimentary reader/writer system using the starter code [here](./starter_code.
 
 I want your version of the code to do the following:
 
-- Let readers read up to N at a time, where N is a value given to a semaphore
+- Let readers read up to N at a time, where N is a value given to a semaphore lock
 - Let 1 writer write at a time.
-
+- Start your program with 100 readers and 5 writers.
+- Start all your threads at the same time, but 
 

@@ -1,4 +1,5 @@
 ## Reader Writer Problem
+Due: Monday November 7th by classtime.
 
 ### Overview
 
@@ -17,4 +18,11 @@ Then there are ways to implement who has what access:
 - Etc.
 
 Ultimately we create order using locks. Who gets a lock is based on priority. I would like us to create 
-a rudimentary reader/writer system using the starter code [here](./starter_code.py). 
+a rudimentary reader/writer system using the starter code [here](./starter_code.py). It gives us the ability to visualize threads using ncurses. 
+
+I want your version of the code to do the following:
+
+- Let readers read up to N at a time, where N is a value given to a semaphore
+- Let 1 writer write at a time.
+
+

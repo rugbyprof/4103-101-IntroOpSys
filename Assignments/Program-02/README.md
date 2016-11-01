@@ -1,7 +1,7 @@
 ## Dining Philosophers
 
 ### Program Description 
-- []
+- [dining_philosophers](./dining_philosophers.md)
 
 ### Helper Code
 - [colors_test.py](./colors_test.py) reads in [colors.csv](./colors.csv) and prints the following:

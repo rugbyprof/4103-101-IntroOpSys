@@ -11,11 +11,17 @@ import struct
 
 screenLock = threading.Lock()
 
+"""
+Location object to help the Curses Window class
+"""
 class Cell(object):
     def __init__(self,row=0,col=0):
         self.row = row
         self.col = col
 
+"""
+Curses Window wrapper to help with printing to the screen
+"""
 class CursesWindow(object):
         
     def __init__(self):
@@ -35,6 +41,9 @@ class CursesWindow(object):
 
         self.screen.border(0)    
 
+    """
+    Loads the possible colors from colors.csv
+    """
     def loadColors(self):
         f = open("colors.csv","r")
 

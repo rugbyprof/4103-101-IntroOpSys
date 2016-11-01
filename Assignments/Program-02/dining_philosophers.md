@@ -1,4 +1,3 @@
-# Not Done
 ## Dining Philosophers
 Due: Monday November 7th by classtime.
 

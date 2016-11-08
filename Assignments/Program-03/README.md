@@ -22,13 +22,13 @@ The format of a `FAT` is as follows:
 
 ***Example Fat:*** (start of)
 
-~~~txt
+```
 xyxyxy.txt 0 3235
 zzzzzz.dat 4096 7869
 ououou.txt 8192 234456
-~~~
+```
 
-~~~python
+```python
 class File(object):
     def __init__(self,name,start,length):
         self.Name = name
@@ -48,17 +48,17 @@ class Fat(object):
         # GetFileNames()               # returns array of filenames.
         # GetFileByName(filename)      # returns starting address, and length of file (or just a struct File with everything is ok).
         
-~~~
+```
 
 #### Disk
 
 A `disk` (in our simulation) is actually a file that holds `P` number of processes (or files). Each process `p` will be of varying size, but will be stored in a page aligned manner. So, if a particular disk has a `4K` page size, then the data for each process will start on a byte that is aligned with `4K`.
 
 For example of a process `p` is 12,324 bytes, it will consume 3 pages. 
-
-- Page 1 (0    -> 4095)
-- Page 2 (4096 -> 8191)
-- Page 3 (8192 -> 12288)
+>
+>- Page 1 (0    -> 4095)
+>- Page 2 (4096 -> 8191)
+>- Page 3 (8192 -> 12288)
 
 Assuming process `p` starts at address `0` it will consume entirely the first 2 pages, but it still consumes the first 36 bytes of page `3` (wasting the rest of that page). 
 

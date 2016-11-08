@@ -1,11 +1,12 @@
+# Not Done
 ### Program 3: Disk Simulation
 
 #### Overview
 
-For the first part of our virtual memory simulation we are going to create a disk simulation. Loading processes into memory requires accessing disk to retrieve pages and load them into main memory (RAM), and whatever doesn't fit into main memory, we place in virtual memory. 
- 
-Before we implement our two level Page Table mapping virtual addresses into physical address, I would like us to create a "physical disk" simulation. This simulation will have `Disks` with varying page sizes,  and a variable number of processes (files) stored on each disk. Of course, the files will be stored in a manner that fits with the `page size` for that particular disk. To help us find or files on `disk`, we need a structure to point us in the right direction. For this, we will use the concept of a `file allocation table`.
+For the first part of our virtual memory simulation we are going to create a disk simulation. Loading processes into memory requires accessing disk to retrieve pages (blocks on disk and frames in memory) and load them into main memory (RAM), and whatever doesn't fit into main memory, we place in virtual memory. We will do a little (or a lot of) hand waving at what really happens during a physical disk access, totally ignoring buffering and the caching of data. 
 
+So ultimately we would like to implement a two level Page Table to map virtual addresses into physical addresses, however, we need to first access a disk. This program will be our "physical disk" simulation. It will have `Disks` with varying page sizes (block sizes on disk),  and a variable number of programs and / or files stored on each disk. We will assume that `page size == block size` and the files will be stored in a manner that fits with the `block size` for that particular disk. To help us find or files on the `disk`, we need to first implement some structure to represent a `File Allocation Table`:
+>A file allocation table (FAT) is a table that an operating system maintains on a hard disk that provides a map of the clusters (the basic units of logical storage on a hard disk) that a file has been stored in.
 
 #### File Allocation Table
 
@@ -73,7 +74,7 @@ The number is important, because it needs to be associated with a `File Allocati
 
 ***Example Disk:*** (start of)
 
-~~~cpp
+```python
     class Disk :  public Fat{
     private:
         Fat *F;             //Pointer to disks file allocation table
@@ -91,7 +92,7 @@ The number is important, because it needs to be associated with a `File Allocati
         //
         
     };
-~~~
+```
 
 
 #### What You Need to Accomplish
@@ -101,7 +102,7 @@ I will provide an `Driver` of sorts that will act like the operating system.  Re
 
 ***Example Driver File:***
 
-~~~cpp
+```cpp
 4
 Disk-4096-0
 Disk-1024-1
@@ -113,13 +114,13 @@ b.txt
 c.txt
 hello.dat
 what.txt
-~~~
+```
 
 So, you know there will be 4 disks to read and 5 files to find on 1 of these disks.
 
 For each file that you read, output its contents (stored in hex) as ascii to some output file that will contain:
 
-~~~cpp
+```cpp
 a.txt 
 Disk: 1
 Start: 23454
@@ -144,7 +145,7 @@ blah
 blah
 blah
 
-~~~
+```
 
 As a help, you can go to [AsciiTable.com](http://www.asciitable.com/). Notice that each character ranges from  0x20 to 0x7E, so our traditional grouping of 8 hexidecimal characters would result in 4 ascii characters.
 

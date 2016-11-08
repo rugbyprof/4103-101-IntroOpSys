@@ -1,4 +1,4 @@
-### Project 2: Disk Simulation
+### Program 3: Disk Simulation
 
 #### Overview
 
